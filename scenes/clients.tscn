@@ -1,0 +1,90 @@
+[gd_scene load_steps=13 format=3 uid="uid://dps8xqivye3pa"]
+
+[ext_resource type="Texture2D" uid="uid://bfhp8bkjmsg6r" path="res://assets/sprites/Clients/clients/Adam_16x16.png" id="1_03e4c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5ogl"]
+atlas = ExtResource("1_03e4c")
+region = Rect2(0, 192, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_asrr4"]
+atlas = ExtResource("1_03e4c")
+region = Rect2(16, 192, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucy7y"]
+atlas = ExtResource("1_03e4c")
+region = Rect2(32, 192, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxbd5"]
+atlas = ExtResource("1_03e4c")
+region = Rect2(48, 192, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dih5w"]
+atlas = ExtResource("1_03e4c")
+region = Rect2(64, 192, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqws1"]
+atlas = ExtResource("1_03e4c")
+region = Rect2(80, 192, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_asmu6"]
+atlas = ExtResource("1_03e4c")
+region = Rect2(96, 192, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d30ys"]
+atlas = ExtResource("1_03e4c")
+region = Rect2(112, 192, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6in8p"]
+atlas = ExtResource("1_03e4c")
+region = Rect2(128, 192, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sj24i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5ogl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_asrr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucy7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxbd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dih5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqws1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_asmu6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d30ys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6in8p")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k62qb"]
+radius = 7.0
+height = 18.0
+
+[node name="Clients" type="CharacterBody2D"]
+
+[node name="Client 01" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_sj24i")
+animation = &"walk_right"
+autoplay = "walk_right"
+frame_progress = 0.772151
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("CapsuleShape2D_k62qb")

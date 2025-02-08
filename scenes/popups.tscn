@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://m82heu13yugk"]
+
+[ext_resource type="Script" path="res://scripts/popups.gd" id="1_28e8s"]
+[ext_resource type="FontFile" uid="uid://be5fi040isadn" path="res://assets/fonts/Pixelmax-Regular.otf" id="2_5y8is"]
+
+[node name="Popups" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_28e8s")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ItemPopup" type="PopupPanel" parent="CanvasLayer"]
+unique_name_in_owner = true
+position = Vector2i(60, 20)
+size = Vector2i(113, 100)
+visible = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ItemPopup"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 109.0
+offset_bottom = 96.0
+
+[node name="Label" type="Label" parent="CanvasLayer/ItemPopup/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5y8is")
+text = "Ingrédients"
+
+[node name="Label2" type="Label" parent="CanvasLayer/ItemPopup/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5y8is")
+theme_override_font_sizes/font_size = 10
+text = "Kaly"

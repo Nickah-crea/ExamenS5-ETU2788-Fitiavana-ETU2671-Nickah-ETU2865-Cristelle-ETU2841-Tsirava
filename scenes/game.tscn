@@ -12,11 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://cbjrqwn1jkt4g" path="res://assets/sprites/Food/ingredient/03_dish_pile.png" id="9_s4kkw"]
 [ext_resource type="Texture2D" uid="uid://wawwaausrs2" path="res://assets/sprites/Food/ingredient/04_bowl.png" id="10_y583s"]
 [ext_resource type="Texture2D" uid="uid://ckobg355gi7i0" path="res://assets/sprites/Food/poel.png" id="12_iqfuk"]
+[ext_resource type="Script" path="res://scenes/bouton-pizza.gd" id="14_6tmgn"]
 [ext_resource type="Texture2D" uid="uid://baush4hsi21k3" path="res://assets/sprites/Food/ingredient/93_sandwich_dish.png" id="14_6uyfn"]
 [ext_resource type="Texture2D" uid="uid://dw118nkomn26h" path="res://assets/sprites/Food/ingredient/87_ramen.png" id="15_3iwvy"]
 [ext_resource type="Texture2D" uid="uid://k3yvnl5xnfkn" path="res://assets/sprites/Food/ingredient/68_macncheese_dish.png" id="16_jmq6i"]
 [ext_resource type="Texture2D" uid="uid://1mkcwqts47y4" path="res://assets/sprites/Food/ingredient/41_eggsalad_bowl.png" id="16_p2ht1"]
-[ext_resource type="Texture2D" uid="uid://djh54wo0agqpi" path="res://assets/sprites/Food/ingredient/82_pizza_dish.png" id="17_sk6d2"]
 [ext_resource type="Texture2D" uid="uid://ocqom1ctb1lm" path="res://assets/sprites/Food/ingredient/94_spaghetti.png" id="18_x45ib"]
 [ext_resource type="PackedScene" uid="uid://dps8xqivye3pa" path="res://scenes/clients.tscn" id="19_lh06h"]
 [ext_resource type="PackedScene" uid="uid://bhwshm7bp5ecd" path="res://scenes/client_02.tscn" id="19_ogvex"]
@@ -610,10 +610,13 @@ position = Vector2(-38.875, -102.875)
 scale = Vector2(0.367188, 0.367188)
 texture = ExtResource("16_p2ht1")
 
-[node name="82PizzaDish" type="Sprite2D" parent="Food"]
-position = Vector2(93, -102)
+[node name="82PizzaDish" type="TextureButton" parent="Food"]
+offset_left = 93.0
+offset_top = -102.0
+offset_right = 93.0
+offset_bottom = -102.0
 scale = Vector2(0.34375, 0.34375)
-texture = ExtResource("17_sk6d2")
+script = ExtResource("14_6tmgn")
 
 [node name="03DishPile" type="Sprite2D" parent="Food"]
 position = Vector2(-18.25, -76.3182)

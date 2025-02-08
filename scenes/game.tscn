@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cxk7kb218tc20"]
+[gd_scene load_steps=45 format=3 uid="uid://cxk7kb218tc20"]
 
 [ext_resource type="PackedScene" uid="uid://bttq3qjqguo6s" path="res://scenes/player.tscn" id="1_pi1xq"]
 [ext_resource type="Texture2D" uid="uid://dk68bbm5e820g" path="res://assets/sprites/resto/cuisine - 01.png" id="2_432i5"]
@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://cbjrqwn1jkt4g" path="res://assets/sprites/Food/ingredient/03_dish_pile.png" id="9_s4kkw"]
 [ext_resource type="Texture2D" uid="uid://wawwaausrs2" path="res://assets/sprites/Food/ingredient/04_bowl.png" id="10_y583s"]
 [ext_resource type="Texture2D" uid="uid://ckobg355gi7i0" path="res://assets/sprites/Food/poel.png" id="12_iqfuk"]
-[ext_resource type="Script" path="res://scenes/bouton-pizza.gd" id="14_6tmgn"]
 [ext_resource type="Texture2D" uid="uid://baush4hsi21k3" path="res://assets/sprites/Food/ingredient/93_sandwich_dish.png" id="14_6uyfn"]
 [ext_resource type="Texture2D" uid="uid://dw118nkomn26h" path="res://assets/sprites/Food/ingredient/87_ramen.png" id="15_3iwvy"]
 [ext_resource type="Texture2D" uid="uid://k3yvnl5xnfkn" path="res://assets/sprites/Food/ingredient/68_macncheese_dish.png" id="16_jmq6i"]
@@ -28,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://cu2dusrofvefq" path="res://assets/sprites/Food/ingredient/Eggs.png" id="26_4c702"]
 [ext_resource type="Texture2D" uid="uid://c3eumpntdqpli" path="res://assets/sprites/Food/ingredient/09_baguette.png" id="27_0vx8j"]
 [ext_resource type="Texture2D" uid="uid://brwvhbeqwtshc" path="res://assets/sprites/Food/ingredient/13_bacon.png" id="27_4fahh"]
+[ext_resource type="Script" path="res://scenes/objet_deplacable.gd" id="29_1wa6k"]
 [ext_resource type="Texture2D" uid="uid://hpgklq023r70" path="res://assets/sprites/Food/ingredient/Steak.png" id="29_er2r2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rynlo"]
@@ -535,10 +535,14 @@ texture = ExtResource("6_daa8c")
 sources/0 = SubResource("TileSetAtlasSource_v60fx")
 sources/1 = SubResource("TileSetAtlasSource_e5ty8")
 
+[sub_resource type="GDScript" id="GDScript_ud4lf"]
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0hj7h"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yt20i"]
 distance = -120.0
+
+[sub_resource type="ImageTexture" id="ImageTexture_1ivm4"]
 
 [node name="Game" type="Node2D"]
 
@@ -610,13 +614,9 @@ position = Vector2(-38.875, -102.875)
 scale = Vector2(0.367188, 0.367188)
 texture = ExtResource("16_p2ht1")
 
-[node name="82PizzaDish" type="TextureButton" parent="Food"]
-offset_left = 93.0
-offset_top = -102.0
-offset_right = 93.0
-offset_bottom = -102.0
+[node name="82PizzaDish" type="Sprite2D" parent="Food"]
 scale = Vector2(0.34375, 0.34375)
-script = ExtResource("14_6tmgn")
+script = SubResource("GDScript_ud4lf")
 
 [node name="03DishPile" type="Sprite2D" parent="Food"]
 position = Vector2(-18.25, -76.3182)
@@ -658,7 +658,7 @@ shape = SubResource("WorldBoundaryShape2D_yt20i")
 position = Vector2(53, 26)
 
 [node name="Player" parent="." instance=ExtResource("1_pi1xq")]
-position = Vector2(3, -32)
+position = Vector2(0, -31)
 
 [node name="Ingredients" type="TileMap" parent="."]
 format = 2
@@ -707,3 +707,12 @@ texture = ExtResource("25_k4ww5")
 position = Vector2(-92.5, -83.5)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("29_er2r2")
+
+[node name="ObjetDeplacable" type="Node2D" parent="."]
+script = ExtResource("29_1wa6k")
+
+[node name="Sprite2D" type="Sprite2D" parent="ObjetDeplacable"]
+scale = Vector2(1, 27)
+texture = SubResource("ImageTexture_1ivm4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjetDeplacable"]

@@ -624,7 +624,7 @@ scale = Vector2(0.34375, 0.34375)
 texture = ExtResource("18_x45ib")
 
 [node name="Clients" parent="." instance=ExtResource("19_lh06h")]
-position = Vector2(-42, 73)
+position = Vector2(-33, 50)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-52, -23)

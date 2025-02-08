@@ -1,6 +1,43 @@
-[gd_scene load_steps=2 format=3 uid="uid://d21piggv6e8xj"]
+[gd_scene load_steps=8 format=3 uid="uid://d1wdv6iqpf06e"]
 
-[ext_resource type="Texture2D" uid="uid://djh54wo0agqpi" path="res://assets/sprites/Food/ingredient/82_pizza_dish.png" id="1_51tdo"]
+[ext_resource type="Texture2D" uid="uid://c0jxu0mg34fi0" path="res://assets/sprites/Food/ingredient/Onion.png" id="2_ramml"]
+[ext_resource type="Texture2D" uid="uid://c4mvibuxr51x" path="res://assets/sprites/Food/ingredient/Cheese.png" id="3_hxchy"]
+[ext_resource type="Texture2D" uid="uid://sfjd6eno0uiv" path="res://assets/sprites/Food/ingredient/Tomato.png" id="4_h00hv"]
+[ext_resource type="Texture2D" uid="uid://c110wf0lf5jxj" path="res://assets/sprites/Food/ingredient/67_macncheese.png" id="5_cauux"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_qa1l0"]
+
+[sub_resource type="GDScript" id="GDScript_8gsxu"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="GDScript" id="GDScript_j75q0"]
+script/source = "extends Panel
+
+var ingredients = [\"Tomate\", \"Fromage\", \"Oignon\", \"Pâte\"]
+
+func _ready() -> void:
+	var vbox = $VBoxContainer
+	for ingredient in ingredients:
+		var button = Button.new()
+		button.text = ingredient
+		# Utilise un Callable pour transmettre un argument à la fonction _on_ingredient_pressed
+		button.connect(\"pressed\", Callable(self, \"_on_ingredient_pressed\").bind(ingredient))
+		vbox.add_child(button)
+
+func _on_ingredient_pressed(ingredient: String) -> void:
+	print(ingredient + \" a été sélectionné!\")
+"
 
 [node name="Buttons" type="Control"]
 layout_mode = 3
@@ -10,9 +47,17 @@ offset_bottom = 40.0
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
-icon = ExtResource("1_51tdo")
+offset_left = -2.0
+offset_top = 2.0
+offset_right = 309.0
+offset_bottom = 220.0
+text = "Pâte 
+Tomate 
+fromage
+oignon
+"
+icon = SubResource("ViewportTexture_qa1l0")
+script = SubResource("GDScript_8gsxu")
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 2
@@ -49,7 +94,35 @@ layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="Onion" type="Sprite2D" parent="."]
+position = Vector2(109, 146.5)
+scale = Vector2(1.25, 1.0625)
+texture = ExtResource("2_ramml")
+
+[node name="Cheese" type="Sprite2D" parent="."]
+position = Vector2(108, 120)
+texture = ExtResource("3_hxchy")
+
+[node name="Tomato" type="Sprite2D" parent="."]
+position = Vector2(110, 98)
+texture = ExtResource("4_h00hv")
+
+[node name="67Macncheese" type="Sprite2D" parent="."]
+position = Vector2(108, 76)
+scale = Vector2(0.65625, 0.6875)
+texture = ExtResource("5_cauux")
+
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 46.0
+offset_bottom = 50.0
+script = SubResource("GDScript_j75q0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 32.0
+offset_right = 201.0
+offset_bottom = 175.0

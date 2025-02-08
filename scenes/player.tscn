@@ -250,7 +250,7 @@ script = ExtResource("1_d2e2j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gsqb4")
-animation = &"front_idle"
+animation = &"side_right_walk"
 autoplay = "front_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

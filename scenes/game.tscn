@@ -542,7 +542,7 @@ sources/1 = SubResource("TileSetAtlasSource_e5ty8")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yt20i"]
 distance = -120.0
 
-[sub_resource type="ImageTexture" id="ImageTexture_1ivm4"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_jh5g4"]
 
 [node name="Game" type="Node2D"]
 
@@ -713,6 +713,6 @@ script = ExtResource("29_1wa6k")
 
 [node name="Sprite2D" type="Sprite2D" parent="ObjetDeplacable"]
 scale = Vector2(1, 27)
-texture = SubResource("ImageTexture_1ivm4")
+texture = SubResource("ViewportTexture_jh5g4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjetDeplacable"]

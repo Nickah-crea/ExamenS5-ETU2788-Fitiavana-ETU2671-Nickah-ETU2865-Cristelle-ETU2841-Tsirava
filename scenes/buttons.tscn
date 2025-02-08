@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://d21piggv6e8xj"]
+
+[ext_resource type="Texture2D" uid="uid://djh54wo0agqpi" path="res://assets/sprites/Food/ingredient/82_pizza_dish.png" id="1_51tdo"]
+
+[node name="Buttons" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+icon = ExtResource("1_51tdo")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button5" type="Button" parent="."]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button6" type="Button" parent="."]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button7" type="Button" parent="."]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button8" type="Button" parent="."]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://cxk7kb218tc20"]
+[gd_scene load_steps=43 format=3 uid="uid://cxk7kb218tc20"]
 
 [ext_resource type="PackedScene" uid="uid://bttq3qjqguo6s" path="res://scenes/player.tscn" id="1_pi1xq"]
 [ext_resource type="Texture2D" uid="uid://dk68bbm5e820g" path="res://assets/sprites/resto/cuisine - 01.png" id="2_432i5"]
@@ -7,19 +7,28 @@
 [ext_resource type="Texture2D" uid="uid://bvc2mshwksas3" path="res://assets/sprites/tileset - 01.png" id="4_the3m"]
 [ext_resource type="Texture2D" uid="uid://dnm2db3d137s" path="res://assets/sprites/Food/ingredient/39_friedegg_dish.png" id="6_daa8c"]
 [ext_resource type="Texture2D" uid="uid://cd10gjy0h7515" path="res://assets/sprites/Food/Food.png" id="6_tpvlc"]
+[ext_resource type="Texture2D" uid="uid://brnapbj0ciq4g" path="res://assets/sprites/Food/ingredient/08_bread_dish.png" id="8_lp1td"]
 [ext_resource type="Texture2D" uid="uid://cicwshqre602v" path="res://assets/sprites/Food/ingredient/02_dish_2.png" id="8_ovuem"]
 [ext_resource type="Texture2D" uid="uid://cbjrqwn1jkt4g" path="res://assets/sprites/Food/ingredient/03_dish_pile.png" id="9_s4kkw"]
 [ext_resource type="Texture2D" uid="uid://wawwaausrs2" path="res://assets/sprites/Food/ingredient/04_bowl.png" id="10_y583s"]
 [ext_resource type="Texture2D" uid="uid://ckobg355gi7i0" path="res://assets/sprites/Food/poel.png" id="12_iqfuk"]
-[ext_resource type="Texture2D" uid="uid://cvl0cbnoiih4i" path="res://assets/sprites/Food/ingredient/96_steak_dish.png" id="13_7tjal"]
 [ext_resource type="Texture2D" uid="uid://baush4hsi21k3" path="res://assets/sprites/Food/ingredient/93_sandwich_dish.png" id="14_6uyfn"]
 [ext_resource type="Texture2D" uid="uid://dw118nkomn26h" path="res://assets/sprites/Food/ingredient/87_ramen.png" id="15_3iwvy"]
+[ext_resource type="Texture2D" uid="uid://k3yvnl5xnfkn" path="res://assets/sprites/Food/ingredient/68_macncheese_dish.png" id="16_jmq6i"]
 [ext_resource type="Texture2D" uid="uid://1mkcwqts47y4" path="res://assets/sprites/Food/ingredient/41_eggsalad_bowl.png" id="16_p2ht1"]
 [ext_resource type="Texture2D" uid="uid://djh54wo0agqpi" path="res://assets/sprites/Food/ingredient/82_pizza_dish.png" id="17_sk6d2"]
 [ext_resource type="Texture2D" uid="uid://ocqom1ctb1lm" path="res://assets/sprites/Food/ingredient/94_spaghetti.png" id="18_x45ib"]
 [ext_resource type="PackedScene" uid="uid://dps8xqivye3pa" path="res://scenes/clients.tscn" id="19_lh06h"]
 [ext_resource type="PackedScene" uid="uid://bhwshm7bp5ecd" path="res://scenes/client_02.tscn" id="19_ogvex"]
-[ext_resource type="PackedScene" uid="uid://du77y7bxpu7jv" path="res://scenes/menu.tscn" id="20_ffayi"]
+[ext_resource type="Texture2D" uid="uid://c4mvibuxr51x" path="res://assets/sprites/Food/ingredient/Cheese.png" id="21_no0vx"]
+[ext_resource type="Texture2D" uid="uid://bukc6q2y64yxp" path="res://assets/sprites/Food/ingredient/07_bread.png" id="22_iacle"]
+[ext_resource type="Texture2D" uid="uid://pjyt4vhjqo72" path="res://assets/sprites/Food/ingredient/38_friedegg.png" id="23_cqu2u"]
+[ext_resource type="Texture2D" uid="uid://c0jxu0mg34fi0" path="res://assets/sprites/Food/ingredient/Onion.png" id="24_8c6n6"]
+[ext_resource type="Texture2D" uid="uid://sfjd6eno0uiv" path="res://assets/sprites/Food/ingredient/Tomato.png" id="25_k4ww5"]
+[ext_resource type="Texture2D" uid="uid://cu2dusrofvefq" path="res://assets/sprites/Food/ingredient/Eggs.png" id="26_4c702"]
+[ext_resource type="Texture2D" uid="uid://c3eumpntdqpli" path="res://assets/sprites/Food/ingredient/09_baguette.png" id="27_0vx8j"]
+[ext_resource type="Texture2D" uid="uid://brwvhbeqwtshc" path="res://assets/sprites/Food/ingredient/13_bacon.png" id="27_4fahh"]
+[ext_resource type="Texture2D" uid="uid://hpgklq023r70" path="res://assets/sprites/Food/ingredient/Steak.png" id="29_er2r2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rynlo"]
 texture = ExtResource("2_gk6e4")
@@ -243,24 +252,12 @@ texture = ExtResource("4_mtukp")
 4:21/0 = 0
 5:21/0 = 0
 6:21/0 = 0
-0:22/0 = 0
-1:22/0 = 0
-3:22/0 = 0
-4:22/0 = 0
 5:22/0 = 0
 6:22/0 = 0
-0:23/0 = 0
-1:23/0 = 0
 2:23/0 = 0
-3:23/0 = 0
-4:23/0 = 0
 5:23/0 = 0
 6:23/0 = 0
-0:24/0 = 0
-1:24/0 = 0
 2:24/0 = 0
-3:24/0 = 0
-4:24/0 = 0
 5:24/0 = 0
 6:24/0 = 0
 0:27/0 = 0
@@ -358,6 +355,13 @@ texture = ExtResource("4_mtukp")
 0:17/size_in_atlas = Vector2i(3, 3)
 0:17/0 = 0
 0:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24.25, -13.75, 24, -13.75, 23.75, 24.5, -24, 24.5)
+0:22/size_in_atlas = Vector2i(2, 3)
+0:22/0 = 0
+0:22/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.617, -22.2739, 16.617, -22.6274, 15.2028, 23.6881, -15.5564, 23.3345)
+3:22/size_in_atlas = Vector2i(2, 3)
+3:22/0 = 0
+3:22/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.617, -22.2739, 16.617, -22.6274, 15.2028, 23.6881, -15.5564, 23.3345)
+2:21/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_s8odh"]
 physics_layer_0/collision_layer = 1
@@ -524,10 +528,8 @@ texture = ExtResource("6_tpvlc")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e5ty8"]
 texture = ExtResource("6_daa8c")
+0:0/size_in_atlas = Vector2i(2, 2)
 0:0/0 = 0
-1:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_vyt0x"]
 sources/0 = SubResource("TileSetAtlasSource_v60fx")
@@ -552,7 +554,7 @@ zoom = Vector2(3, 3)
 [node name="Decoration" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_s8odh")
 format = 2
-layer_0/tile_data = PackedInt32Array(131066, 0, 17, 65537, 0, 17, 393229, 0, 17, -262154, 0, 15, -327667, 0, 15, 393206, 0, 15, -65546, 65536, 16, 262134, 65536, 16, 393213, 327680, 805306388, 327684, 327680, 805306386, -262144, 458752, 15, -131059, 0, 17, 131080, 0, 17, 65526, 458752, 15, -393218, 196608, 8, -458751, 196608, 8, -458749, 196608, 8, -262131, 262144, 25, 262157, 262144, 25, -6, 262144, 25, -65535, 262144, 25, 8, 262144, 25, 131082, 196608, 25, 65539, 196608, 25, 131068, 196608, 25, -196600, 196608, 25, -262136, 196608, 25, -393224, 327680, 16, -393223, 393216, 16, -393222, 458752, 16, -458743, 393216, 16, -458742, 458752, 16, -458741, 327680, 16)
+layer_0/tile_data = PackedInt32Array(131066, 0, 17, 65537, 0, 17, 393229, 0, 17, -262154, 0, 15, -327667, 0, 15, 393206, 0, 15, -65546, 65536, 16, 262134, 65536, 16, 393213, 327680, 805306388, 327684, 327680, 805306386, -262144, 458752, 15, -131059, 0, 17, 131080, 0, 17, 65526, 458752, 15, -393218, 196608, 8, -458751, 196608, 8, -458749, 196608, 8, -262131, 262144, 25, 262157, 262144, 25, -6, 262144, 25, -65535, 262144, 25, 8, 262144, 25, 131082, 196608, 25, 65539, 196608, 25, 131068, 196608, 25, -196600, 196608, 25, -262136, 196608, 25, -393224, 327680, 16, -393223, 393216, 16, -393222, 458752, 16, -458743, 393216, 16, -458742, 458752, 16, -458741, 327680, 16, -458746, 196608, 8, -262150, 0, 22, -262152, 196608, 22)
 
 [node name="Kitchen" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_xkdy0")
@@ -562,49 +564,44 @@ layer_0/tile_data = PackedInt32Array(-262139, 131072, 2, -262148, 0, 2)
 [node name="Kitchen 2" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_vphkw")
 format = 2
-layer_0/tile_data = PackedInt32Array(-327678, 131072, 2, -262146, 196608, 2)
+layer_0/tile_data = PackedInt32Array(-327678, 131072, 2, -262146, 196608, 2, -327679, 131072, 2)
 
 [node name="Food" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_vyt0x")
 format = 2
 
 [node name="02Dish2" type="Sprite2D" parent="Food"]
-position = Vector2(38, 24)
+position = Vector2(22, 27)
 scale = Vector2(0.328125, 0.328125)
 texture = ExtResource("8_ovuem")
-
-[node name="03DishPile" type="Sprite2D" parent="Food"]
-position = Vector2(-18.25, -76.3182)
-scale = Vector2(0.296875, 0.269887)
-texture = ExtResource("9_s4kkw")
 
 [node name="04Bowl" type="Sprite2D" parent="Food"]
 position = Vector2(24.5, 13.5)
 scale = Vector2(0.34375, 0.34375)
 texture = ExtResource("10_y583s")
 
-[node name="Poel" type="Sprite2D" parent="Food"]
-position = Vector2(60.0191, -77)
-scale = Vector2(0.0368925, 0.0465278)
-texture = ExtResource("12_iqfuk")
-
 [node name="Poel 2" type="Sprite2D" parent="Food"]
 position = Vector2(45, -77)
 scale = Vector2(0.0355263, 0.0499231)
 texture = ExtResource("12_iqfuk")
 
-[node name="96SteakDish" type="Sprite2D" parent="Food"]
-position = Vector2(-18.3125, -102.313)
-scale = Vector2(0.332031, 0.332031)
-texture = ExtResource("13_7tjal")
+[node name="Poel 4" type="Sprite2D" parent="Food"]
+position = Vector2(61, -77)
+scale = Vector2(0.0355263, 0.0499231)
+texture = ExtResource("12_iqfuk")
+
+[node name="Poel 3" type="Sprite2D" parent="Food"]
+position = Vector2(30, -77)
+scale = Vector2(0.0355263, 0.0499231)
+texture = ExtResource("12_iqfuk")
 
 [node name="93SandwichDish" type="Sprite2D" parent="Food"]
-position = Vector2(2.78125, -102.219)
+position = Vector2(7, -102)
 scale = Vector2(0.326172, 0.326172)
 texture = ExtResource("14_6uyfn")
 
 [node name="87Ramen" type="Sprite2D" parent="Food"]
-position = Vector2(24.5625, -102.438)
+position = Vector2(29, -102)
 scale = Vector2(0.339844, 0.339844)
 texture = ExtResource("15_3iwvy")
 
@@ -614,17 +611,37 @@ scale = Vector2(0.367188, 0.367188)
 texture = ExtResource("16_p2ht1")
 
 [node name="82PizzaDish" type="Sprite2D" parent="Food"]
-position = Vector2(67.5, -102.5)
+position = Vector2(93, -102)
 scale = Vector2(0.34375, 0.34375)
 texture = ExtResource("17_sk6d2")
 
-[node name="94Spaghetti" type="Sprite2D" parent="Food"]
-position = Vector2(47.5, -102.5)
+[node name="03DishPile" type="Sprite2D" parent="Food"]
+position = Vector2(-18.25, -76.3182)
+scale = Vector2(0.296875, 0.269887)
+texture = ExtResource("9_s4kkw")
+
+[node name="08BreadDish" type="Sprite2D" parent="Food"]
+position = Vector2(-16, -103)
 scale = Vector2(0.34375, 0.34375)
+texture = ExtResource("8_lp1td")
+
+[node name="39FriedeggDish" type="Sprite2D" parent="Food"]
+position = Vector2(74, -102)
+scale = Vector2(0.34375, 0.34375)
+texture = ExtResource("6_daa8c")
+
+[node name="68MacncheeseDish" type="Sprite2D" parent="Food"]
+position = Vector2(54, -102)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("16_jmq6i")
+
+[node name="94Spaghetti" type="Sprite2D" parent="Food"]
+position = Vector2(114, -102)
+scale = Vector2(0.359375, 0.359375)
 texture = ExtResource("18_x45ib")
 
 [node name="Clients" parent="." instance=ExtResource("19_lh06h")]
-position = Vector2(-33, 50)
+position = Vector2(-42, 73)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-52, -23)
@@ -635,13 +652,55 @@ position = Vector2(54, 10)
 shape = SubResource("WorldBoundaryShape2D_yt20i")
 
 [node name="Client 02" parent="." instance=ExtResource("19_ogvex")]
-position = Vector2(54, 23)
-
-[node name="Menu" parent="." instance=ExtResource("20_ffayi")]
-offset_left = 95.0
-offset_top = -116.0
-offset_right = 95.0
-offset_bottom = -116.0
+position = Vector2(53, 26)
 
 [node name="Player" parent="." instance=ExtResource("1_pi1xq")]
 position = Vector2(3, -32)
+
+[node name="Ingredients" type="TileMap" parent="."]
+format = 2
+
+[node name="Cheese" type="Sprite2D" parent="Ingredients"]
+position = Vector2(-104.375, -91.625)
+scale = Vector2(0.453125, 0.453125)
+texture = ExtResource("21_no0vx")
+
+[node name="07Bread" type="Sprite2D" parent="Ingredients"]
+position = Vector2(-81, -92)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("22_iacle")
+
+[node name="38Friedegg" type="Sprite2D" parent="Ingredients"]
+position = Vector2(-93, -92)
+scale = Vector2(0.390625, 0.390625)
+texture = ExtResource("23_cqu2u")
+
+[node name="Onion" type="Sprite2D" parent="Ingredients"]
+position = Vector2(-115, -92)
+scale = Vector2(0.46875, 0.46875)
+texture = ExtResource("24_8c6n6")
+
+[node name="Eggs" type="Sprite2D" parent="Ingredients"]
+position = Vector2(-126, -83)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("26_4c702")
+
+[node name="13Bacon" type="Sprite2D" parent="Ingredients"]
+position = Vector2(-115, -83)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("27_4fahh")
+
+[node name="09Baguette" type="Sprite2D" parent="Ingredients"]
+position = Vector2(-105, -83)
+scale = Vector2(0.28125, 0.28125)
+texture = ExtResource("27_0vx8j")
+
+[node name="Tomato" type="Sprite2D" parent="Ingredients"]
+position = Vector2(-126, -92)
+scale = Vector2(0.46875, 0.46875)
+texture = ExtResource("25_k4ww5")
+
+[node name="Steak" type="Sprite2D" parent="Ingredients"]
+position = Vector2(-92.5, -83.5)
+scale = Vector2(0.4375, 0.4375)
+texture = ExtResource("29_er2r2")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://8n04bflxntdi"]
 
-[ext_resource type="Script" path="res://scenes/timer.gd" id="1_3a2vs"]
+[ext_resource type="Script" path="res://timer.gd" id="1_3a2vs"]
 
 [node name="Timer" type="CharacterBody2D"]
 script = ExtResource("1_3a2vs")

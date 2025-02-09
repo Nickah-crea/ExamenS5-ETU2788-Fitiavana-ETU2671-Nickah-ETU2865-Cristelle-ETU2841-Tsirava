@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://cxk7kb218tc20"]
+[gd_scene load_steps=47 format=3 uid="uid://cxk7kb218tc20"]
 
 [ext_resource type="PackedScene" uid="uid://bttq3qjqguo6s" path="res://scenes/player.tscn" id="1_pi1xq"]
 [ext_resource type="Texture2D" uid="uid://dk68bbm5e820g" path="res://assets/sprites/resto/cuisine - 01.png" id="2_432i5"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://cu2dusrofvefq" path="res://assets/sprites/Food/ingredient/Eggs.png" id="26_4c702"]
 [ext_resource type="Texture2D" uid="uid://c3eumpntdqpli" path="res://assets/sprites/Food/ingredient/09_baguette.png" id="27_0vx8j"]
 [ext_resource type="Texture2D" uid="uid://brwvhbeqwtshc" path="res://assets/sprites/Food/ingredient/13_bacon.png" id="27_4fahh"]
+[ext_resource type="Script" path="res://scenes/Detection.gd" id="28_f3o73"]
 [ext_resource type="Script" path="res://scenes/objet_deplacable.gd" id="29_1wa6k"]
 [ext_resource type="Texture2D" uid="uid://hpgklq023r70" path="res://assets/sprites/Food/ingredient/Steak.png" id="29_er2r2"]
 
@@ -542,6 +543,10 @@ sources/1 = SubResource("TileSetAtlasSource_e5ty8")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yt20i"]
 distance = -120.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tlnjh"]
+radius = 10.24
+height = 25.6
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_jh5g4"]
 
 [node name="Game" type="Node2D"]
@@ -629,7 +634,7 @@ scale = Vector2(0.34375, 0.34375)
 texture = ExtResource("8_lp1td")
 
 [node name="39FriedeggDish" type="Sprite2D" parent="Food"]
-position = Vector2(74, -102)
+position = Vector2(72, -102)
 scale = Vector2(0.34375, 0.34375)
 texture = ExtResource("6_daa8c")
 
@@ -673,10 +678,10 @@ position = Vector2(-81, -92)
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("22_iacle")
 
-[node name="38Friedegg" type="Sprite2D" parent="Ingredients"]
-position = Vector2(-93, -92)
-scale = Vector2(0.390625, 0.390625)
-texture = ExtResource("23_cqu2u")
+[node name="Steak" type="Sprite2D" parent="Ingredients"]
+position = Vector2(-92.5, -83.5)
+scale = Vector2(0.4375, 0.4375)
+texture = ExtResource("29_er2r2")
 
 [node name="Onion" type="Sprite2D" parent="Ingredients"]
 position = Vector2(-115, -92)
@@ -703,12 +708,21 @@ position = Vector2(-126, -92)
 scale = Vector2(0.46875, 0.46875)
 texture = ExtResource("25_k4ww5")
 
-[node name="Steak" type="Sprite2D" parent="Ingredients"]
-position = Vector2(-92.5, -83.5)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("29_er2r2")
+[node name="Area2D" type="Area2D" parent="Ingredients"]
+script = ExtResource("28_f3o73")
+
+[node name="38Friedegg" type="Sprite2D" parent="Ingredients/Area2D"]
+position = Vector2(-93, -92)
+scale = Vector2(0.390625, 0.390625)
+texture = ExtResource("23_cqu2u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/Area2D"]
+position = Vector2(-93, -92)
+scale = Vector2(0.390625, 0.390625)
+shape = SubResource("CapsuleShape2D_tlnjh")
 
 [node name="ObjetDeplacable" type="Node2D" parent="."]
+visible = false
 script = ExtResource("29_1wa6k")
 
 [node name="Sprite2D" type="Sprite2D" parent="ObjetDeplacable"]

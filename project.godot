@@ -13,10 +13,8 @@ config_version=5
 config/name="Kaly"
 run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
-config/icon="res://Asset 15.svg"
+config/icon="D:\\Jeu-Kaly\\Asset 15.svg"
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"

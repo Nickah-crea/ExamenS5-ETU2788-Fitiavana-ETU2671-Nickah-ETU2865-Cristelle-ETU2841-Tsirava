@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://ipjhykvuftfc"]
+
+[ext_resource type="Texture2D" uid="uid://huwo1c2ln4nu" path="res://assets/sprites/Clients/clients/Bob_phone_16x16.png" id="1_8y46l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fx8e"]
+atlas = ExtResource("1_8y46l")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1pyk"]
+atlas = ExtResource("1_8y46l")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_og8ld"]
+atlas = ExtResource("1_8y46l")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfs1t"]
+atlas = ExtResource("1_8y46l")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a3vp"]
+atlas = ExtResource("1_8y46l")
+region = Rect2(112, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f87dm"]
+atlas = ExtResource("1_8y46l")
+region = Rect2(128, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jlxm0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fx8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1pyk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_og8ld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfs1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4a3vp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f87dm")
+}],
+"loop": true,
+"name": &"Sit",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sui7i"]
+radius = 5.0
+height = 18.0
+
+[node name="Client_04" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jlxm0")
+animation = &"Sit"
+autoplay = "Sit"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_sui7i")

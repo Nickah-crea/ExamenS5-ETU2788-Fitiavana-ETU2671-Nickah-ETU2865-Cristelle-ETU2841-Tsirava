@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://cxk7kb218tc20"]
+[gd_scene load_steps=50 format=3 uid="uid://cxk7kb218tc20"]
 
 [ext_resource type="PackedScene" uid="uid://bttq3qjqguo6s" path="res://scenes/player.tscn" id="1_pi1xq"]
 [ext_resource type="Texture2D" uid="uid://dk68bbm5e820g" path="res://assets/sprites/resto/cuisine - 01.png" id="2_432i5"]
@@ -36,7 +36,6 @@
 [ext_resource type="PackedScene" uid="uid://b5vkgop2wgm7j" path="res://scenes/oeufs.tscn" id="34_166a7"]
 [ext_resource type="Script" path="res://scripts/oeufs.gd" id="35_oskw7"]
 [ext_resource type="PackedScene" uid="uid://cybqb53rraxji" path="res://scenes/commande.tscn" id="36_3x5nt"]
-[ext_resource type="PackedScene" uid="uid://bayqu0xey73b4" path="res://scenes/bread.tscn" id="37_lg7xn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rynlo"]
 texture = ExtResource("2_gk6e4")
@@ -606,6 +605,21 @@ position = Vector2(24.5, 13.5)
 scale = Vector2(0.34375, 0.34375)
 texture = ExtResource("10_y583s")
 
+[node name="Poel2" type="Sprite2D" parent="Food"]
+position = Vector2(45, -77)
+scale = Vector2(0.0355263, 0.0499231)
+texture = ExtResource("12_iqfuk")
+
+[node name="Poel 4" type="Sprite2D" parent="Food"]
+position = Vector2(61, -77)
+scale = Vector2(0.0355263, 0.0499231)
+texture = ExtResource("12_iqfuk")
+
+[node name="Poel 3" type="Sprite2D" parent="Food"]
+position = Vector2(30, -77)
+scale = Vector2(0.0355263, 0.0499231)
+texture = ExtResource("12_iqfuk")
+
 [node name="93SandwichDish" type="Sprite2D" parent="Food"]
 position = Vector2(6, -102)
 scale = Vector2(0.326172, 0.326172)
@@ -651,20 +665,10 @@ position = Vector2(114, -102)
 scale = Vector2(0.359375, 0.359375)
 texture = ExtResource("18_x45ib")
 
-[node name="Poel" type="Sprite2D" parent="Food"]
-position = Vector2(60.8334, -76.5)
-scale = Vector2(0.0472222, 0.0472222)
-texture = ExtResource("12_iqfuk")
-
-[node name="Poel2" type="Sprite2D" parent="Food"]
-position = Vector2(45.8333, -76.5)
-scale = Vector2(0.0472222, 0.0472222)
-texture = ExtResource("12_iqfuk")
-
-[node name="Poel3" type="Sprite2D" parent="Food"]
-position = Vector2(29.8334, -76.5)
-scale = Vector2(0.0472222, 0.0472222)
-texture = ExtResource("12_iqfuk")
+[node name="93SandwichDish02" type="Sprite2D" parent="Food"]
+position = Vector2(136, 32)
+scale = Vector2(0.374778, 0.374778)
+texture = ExtResource("14_6uyfn")
 
 [node name="Clients" parent="." instance=ExtResource("19_lh06h")]
 position = Vector2(-42, 73)
@@ -687,22 +691,22 @@ position = Vector2(3, -32)
 format = 2
 
 [node name="Cheese" type="Sprite2D" parent="Ingredients"]
-position = Vector2(-126, -75)
+position = Vector2(-104.375, -91.625)
 scale = Vector2(0.453125, 0.453125)
 texture = ExtResource("21_no0vx")
 
 [node name="07Bread" type="Sprite2D" parent="Ingredients"]
-position = Vector2(-124, -58)
+position = Vector2(-81, -92)
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("22_iacle")
 
 [node name="38Friedegg" type="Sprite2D" parent="Ingredients"]
-position = Vector2(-111, -75)
+position = Vector2(-93, -92)
 scale = Vector2(0.390625, 0.390625)
 texture = ExtResource("23_cqu2u")
 
 [node name="Onion" type="Sprite2D" parent="Ingredients"]
-position = Vector2(-111, -92)
+position = Vector2(-115, -92)
 scale = Vector2(0.46875, 0.46875)
 texture = ExtResource("24_8c6n6")
 
@@ -712,12 +716,12 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("26_4c702")
 
 [node name="13Bacon" type="Sprite2D" parent="Ingredients"]
-position = Vector2(-111, -83)
+position = Vector2(-115, -83)
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("27_4fahh")
 
 [node name="09Baguette" type="Sprite2D" parent="Ingredients"]
-position = Vector2(-125, -66)
+position = Vector2(-105, -83)
 scale = Vector2(0.28125, 0.28125)
 texture = ExtResource("27_0vx8j")
 
@@ -727,7 +731,7 @@ scale = Vector2(0.46875, 0.46875)
 texture = ExtResource("25_k4ww5")
 
 [node name="Steak" type="Sprite2D" parent="Ingredients"]
-position = Vector2(-110, -67)
+position = Vector2(-92.5, -83.5)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("29_er2r2")
 
@@ -738,14 +742,52 @@ position = Vector2(-88, -10)
 position = Vector2(137, 3)
 
 [node name="Oeuf" parent="." instance=ExtResource("34_166a7")]
-position = Vector2(-85, -92)
+position = Vector2(-83, -85)
 script = ExtResource("35_oskw7")
+
+[node name="MenuPanel" type="Panel" parent="."]
+visible = false
+offset_left = -79.0
+offset_top = -46.0
+offset_right = -59.0
+offset_bottom = -16.0
+
+[node name="GridContainer" type="GridContainer" parent="MenuPanel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SandwichTexture" type="HBoxContainer" parent="MenuPanel/GridContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MenuPanel/GridContainer/SandwichTexture"]
+layout_mode = 2
+texture = ExtResource("14_6uyfn")
+
+[node name="Label" type="Label" parent="MenuPanel/GridContainer/SandwichTexture"]
+layout_mode = 2
+text = "Sandwitch"
+
+[node name="PastaTexture" type="HBoxContainer" parent="MenuPanel/GridContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MenuPanel/GridContainer/PastaTexture"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MenuPanel/GridContainer/PastaTexture"]
+layout_mode = 2
+
+[node name="RamenTexture" type="HBoxContainer" parent="MenuPanel/GridContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MenuPanel/GridContainer/RamenTexture"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MenuPanel/GridContainer/RamenTexture"]
+layout_mode = 2
 
 [node name="Commande" parent="." instance=ExtResource("36_3x5nt")]
 offset_left = 145.0
 offset_top = -94.0
 offset_right = 172.0
 offset_bottom = -67.0
-
-[node name="Breads" parent="." instance=ExtResource("37_lg7xn")]
-position = Vector2(-84, -77)

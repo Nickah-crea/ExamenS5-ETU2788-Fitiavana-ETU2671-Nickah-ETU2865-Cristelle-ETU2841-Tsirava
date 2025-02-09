@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtp1p0gvh66lf"]
+
+[ext_resource type="Texture2D" uid="uid://djh54wo0agqpi" path="res://assets/sprites/Food/ingredient/82_pizza_dish.png" id="1_7a6ny"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ok5hl"]
+height = 20.0
+
+[node name="ObjetDetectable" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -1)
+texture = ExtResource("1_7a6ny")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("CapsuleShape2D_ok5hl")

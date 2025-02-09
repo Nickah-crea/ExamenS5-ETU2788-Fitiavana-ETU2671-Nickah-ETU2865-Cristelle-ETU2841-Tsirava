@@ -15,7 +15,7 @@ func _input(event):
 			else:
 				dragging = false
 
-func _process(_delta):
+func _process(delta):
 	if dragging:
 		# Déplace l'objet en suivant la position de la souris
 		global_position = get_global_mouse_position() + offset

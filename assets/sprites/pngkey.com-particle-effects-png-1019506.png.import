@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj032yusapngl"
-path="res://.godot/imported/cury.jpg-c85bce5aa71c273effffe50f43b3ed83.ctex"
+uid="uid://dlek7ghbo2oxk"
+path="res://.godot/imported/pngkey.com-particle-effects-png-1019506.png-b37508eb57a7a8ce0df7aa50a744026a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/cury.jpg"
-dest_files=["res://.godot/imported/cury.jpg-c85bce5aa71c273effffe50f43b3ed83.ctex"]
+source_file="res://assets/sprites/pngkey.com-particle-effects-png-1019506.png"
+dest_files=["res://.godot/imported/pngkey.com-particle-effects-png-1019506.png-b37508eb57a7a8ce0df7aa50a744026a.ctex"]
 
 [params]
 

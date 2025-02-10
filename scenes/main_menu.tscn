@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bnh3p2deaox0x"]
+[gd_scene load_steps=8 format=3 uid="uid://cnk0ftr467b5g"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_uh5t8"]
 [ext_resource type="Texture2D" uid="uid://cfq32kpkyh561" path="res://assets/sprites/paterne.png" id="2_wc1a1"]
+[ext_resource type="FontFile" uid="uid://be5fi040isadn" path="res://assets/fonts/Pixelmax-Regular.otf" id="3_0anw3"]
 [ext_resource type="Texture2D" uid="uid://dqlqrybfm40l0" path="res://assets/sprites/Asset 15.png" id="3_trg06"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5v85n"]
@@ -92,7 +93,7 @@ texture = ExtResource("2_wc1a1")
 sources/0 = SubResource("TileSetAtlasSource_5v85n")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kamjd"]
-bg_color = Color(0.849688, 0.546957, 0.209923, 1)
+bg_color = Color(0.90076, 0.617942, 0.168348, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -119,29 +120,34 @@ layer_0/tile_data = PackedInt32Array(-1245220, 524288, 1, -1245219, 524288, 1, -
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = -88.0
-offset_top = 36.0
-offset_right = 98.0
-offset_bottom = 190.0
+offset_left = -115.0
+offset_top = 39.0
+offset_right = 105.0
+offset_bottom = 159.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_stretch_ratio = 0.0
 theme_override_colors/font_hover_pressed_color = Color(0.52069, 0.479878, 0.494554, 1)
-theme_override_font_sizes/font_size = 50
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.947199, 0.947199, 0.947199, 1)
+theme_override_fonts/font = ExtResource("3_0anw3")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_kamjd")
 text = "Start"
 
 [node name="Button2" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.947199, 0.947199, 0.947199, 1)
+theme_override_fonts/font = ExtResource("3_0anw3")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_kamjd")
 text = "Quit"
 
-[node name="Asset15" type="Sprite2D" parent="."]
+[node name="Kaly" type="Sprite2D" parent="."]
 position = Vector2(12, -93)
 scale = Vector2(0.144886, 0.144886)
 texture = ExtResource("3_trg06")

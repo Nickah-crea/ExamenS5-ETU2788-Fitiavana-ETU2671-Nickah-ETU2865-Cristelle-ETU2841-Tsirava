@@ -7,7 +7,7 @@ var held_egg = null  # Référence à l'œuf que le personnage porte
 var carrying_bread = false  # Indique si le pain est porté
 var held_bread = null  # Référence au pain que le personnage porte
 
-# Ajoutez une variable pour vérifier si l'œuf a déjà été placé
+# Ajout une variable pour vérifier si l'œuf a déjà été placé
 var egg_placed = false
 var bread_placed = false  # Vérifie si le pain a été placé
 var click_count = 0  # Compteur pour le nombre de clics
@@ -22,24 +22,24 @@ var anim_directions = {
 }
 
 func _ready():
-	var egg = get_node_or_null("/root/Game/Oeuf")  # Remplacez par le bon chemin
+	var egg = get_node_or_null("/root/Game/Oeuf") 
 	if egg:
 		egg.egg_clicked.connect(on_egg_clicked)
 	
-	var bread = get_node_or_null("/root/Game/Bread")  # Remplacez par le bon chemin
+	var bread = get_node_or_null("/root/Game/Bread")
 	if bread:
 		bread.bread_clicked.connect(on_bread_clicked)
 
 	# Crée un nœud pour l'œuf que le personnage tiendra dans sa main
 	held_egg = Sprite2D.new()
-	held_egg.texture = preload("res://assets/sprites/Food/ingredient/39_friedegg_dish.png")  # Remplace par le bon chemin
+	held_egg.texture = preload("res://assets/sprites/Food/ingredient/39_friedegg_dish.png")  
 	held_egg.visible = false  # L'œuf est invisible au début
 	held_egg.scale = Vector2(0.5, 0.5)  # Réduit la taille de l'œuf
 	sprite.add_child(held_egg)  # Ajoute l'œuf comme enfant du sprite pour qu'il suive le personnage
 	
 	# Crée un nœud pour le pain que le personnage tiendra dans sa main
 	held_bread = Sprite2D.new()
-	held_bread.texture = preload("res://assets/sprites/Food/ingredient/07_bread.png")  # Remplace par le bon chemin
+	held_bread.texture = preload("res://assets/sprites/Food/ingredient/07_bread.png")  
 	held_bread.visible = false  # Le pain est invisible au début
 	held_bread.scale = Vector2(0.5, 0.5)  # Réduit la taille du pain
 	sprite.add_child(held_bread)  # Ajoute le pain comme enfant du sprite pour qu'il suive le personnage
@@ -95,7 +95,7 @@ func update_held_egg_position():
 		offset = Vector2(0, 12)
 
 	# Toujours mettre à jour la position de l'œuf en fonction de la position du sprite du joueur
-	held_egg.position = sprite.position + offset  # Assurez-vous que l'œuf suit la position du sprite du joueur
+	held_egg.position = sprite.position + offset 
 
 func update_held_bread_position():
 	var offset = Vector2(8, 10)  # Décale légèrement le pain
@@ -107,7 +107,7 @@ func update_held_bread_position():
 		offset = Vector2(0, 12)
 
 	# Toujours mettre à jour la position du pain en fonction de la position du sprite du joueur
-	held_bread.position = sprite.position + offset  # Assurez-vous que le pain suit la position du sprite du joueur
+	held_bread.position = sprite.position + offset
 
 func _physics_process(_delta):
 	var motion = Vector2()

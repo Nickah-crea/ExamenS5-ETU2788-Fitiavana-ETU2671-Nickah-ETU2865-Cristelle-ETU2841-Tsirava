@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://cxk7kb218tc20"]
+[gd_scene load_steps=54 format=3 uid="uid://cxk7kb218tc20"]
 
 [ext_resource type="PackedScene" uid="uid://bttq3qjqguo6s" path="res://scenes/player.tscn" id="1_pi1xq"]
 [ext_resource type="Texture2D" uid="uid://dk68bbm5e820g" path="res://assets/sprites/resto/cuisine - 01.png" id="2_432i5"]
@@ -26,17 +26,20 @@
 [ext_resource type="Texture2D" uid="uid://c0jxu0mg34fi0" path="res://assets/sprites/Food/ingredient/Onion.png" id="24_8c6n6"]
 [ext_resource type="Texture2D" uid="uid://sfjd6eno0uiv" path="res://assets/sprites/Food/ingredient/Tomato.png" id="25_k4ww5"]
 [ext_resource type="Texture2D" uid="uid://cu2dusrofvefq" path="res://assets/sprites/Food/ingredient/Eggs.png" id="26_4c702"]
-[ext_resource type="Texture2D" uid="uid://c3eumpntdqpli" path="res://assets/sprites/Food/ingredient/09_baguette.png" id="27_0vx8j"]
 [ext_resource type="Texture2D" uid="uid://brwvhbeqwtshc" path="res://assets/sprites/Food/ingredient/13_bacon.png" id="27_4fahh"]
 [ext_resource type="Texture2D" uid="uid://hpgklq023r70" path="res://assets/sprites/Food/ingredient/Steak.png" id="29_er2r2"]
 [ext_resource type="PackedScene" uid="uid://vh40jsggc8fc" path="res://scenes/client_03.tscn" id="30_5kr8j"]
 [ext_resource type="PackedScene" uid="uid://ipjhykvuftfc" path="res://scenes/client_04.tscn" id="31_3r375"]
+[ext_resource type="Texture2D" uid="uid://dwccmjydmkutm" path="res://assets/sprites/Food/ingredient/40_eggsalad.png" id="31_jyfal"]
 [ext_resource type="PackedScene" uid="uid://8jnuxutuofn4" path="res://scenes/smoke.tscn" id="32_5snh5"]
+[ext_resource type="Texture2D" uid="uid://cadybgm3v7qih" path="res://assets/sprites/Food/ingredient/Sushi.png" id="32_aki4e"]
+[ext_resource type="Texture2D" uid="uid://c4h5tbh807jii" path="res://assets/sprites/Food/ingredient/soupe.png" id="33_b6xqd"]
 [ext_resource type="PackedScene" uid="uid://de5laorjnubgf" path="res://scenes/sparks.tscn" id="33_qj0tt"]
 [ext_resource type="PackedScene" uid="uid://b5vkgop2wgm7j" path="res://scenes/oeufs.tscn" id="34_166a7"]
 [ext_resource type="Script" path="res://scripts/oeufs.gd" id="35_oskw7"]
 [ext_resource type="PackedScene" uid="uid://cybqb53rraxji" path="res://scenes/commande.tscn" id="36_3x5nt"]
 [ext_resource type="PackedScene" uid="uid://bayqu0xey73b4" path="res://scenes/bread.tscn" id="37_lg7xn"]
+[ext_resource type="PackedScene" uid="uid://cqpaoednah13u" path="res://scenes/commande_2.tscn" id="40_kdatp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rynlo"]
 texture = ExtResource("2_gk6e4")
@@ -716,11 +719,6 @@ position = Vector2(-111, -83)
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("27_4fahh")
 
-[node name="09Baguette" type="Sprite2D" parent="Ingredients"]
-position = Vector2(-125, -66)
-scale = Vector2(0.28125, 0.28125)
-texture = ExtResource("27_0vx8j")
-
 [node name="Tomato" type="Sprite2D" parent="Ingredients"]
 position = Vector2(-126, -92)
 scale = Vector2(0.46875, 0.46875)
@@ -730,6 +728,21 @@ texture = ExtResource("25_k4ww5")
 position = Vector2(-110, -67)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("29_er2r2")
+
+[node name="pate" type="Sprite2D" parent="Ingredients"]
+position = Vector2(-125, -67)
+scale = Vector2(0.28125, 0.28125)
+texture = ExtResource("31_jyfal")
+
+[node name="riz" type="Sprite2D" parent="Ingredients"]
+position = Vector2(-110, -59)
+scale = Vector2(0.46875, 0.46875)
+texture = ExtResource("32_aki4e")
+
+[node name="bouillon" type="Sprite2D" parent="Ingredients"]
+position = Vector2(-101, -94)
+scale = Vector2(0.0214286, 0.0213938)
+texture = ExtResource("33_b6xqd")
 
 [node name="Client_03" parent="." instance=ExtResource("30_5kr8j")]
 position = Vector2(-88, -10)
@@ -742,10 +755,23 @@ position = Vector2(-85, -92)
 script = ExtResource("35_oskw7")
 
 [node name="Commande" parent="." instance=ExtResource("36_3x5nt")]
-offset_left = 145.0
-offset_top = -94.0
-offset_right = 172.0
-offset_bottom = -67.0
+offset_left = 143.0
+offset_top = -92.0
+offset_right = 170.0
+offset_bottom = -65.0
 
 [node name="Breads" parent="." instance=ExtResource("37_lg7xn")]
 position = Vector2(-84, -77)
+
+[node name="Commande2" parent="." instance=ExtResource("40_kdatp")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 142.0
+offset_top = -77.0
+offset_right = 142.0
+offset_bottom = -77.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4

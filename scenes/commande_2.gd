@@ -8,7 +8,7 @@ func _ready() -> void:
 	http_request.request_completed.connect(_on_request_completed)
 	
 	# Envoyer une requête GET à l'API des commandes
-	var url = "https://symfony-back-kitchen-production.up.railway.app/api/v1/get_list_commandes"
+	var url = "https://symfony-back-kitchen-production.up.railway.app/api/v1/get_list_commandes_payes "
 	var error = http_request.request(url)
 	
 	if error != OK:
